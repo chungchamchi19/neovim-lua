@@ -3,14 +3,14 @@ Author: ChungChamChi
 
 ### Remember Installing Followings Packages
 
-#### Install Nerd Font For Icon 
+#### 1. Install Nerd Font For Icon 
 https://gist.github.com/matthewjberger/7dd7e079f282f8138a9dc3b045ebefa0?permalink_comment_id=3307825#gistcomment-3307825
 
 Or use available fonts in folder `fonts`
 
 Note: `Reboot when install successfully to apply new icon`
 
-#### Install RipGrep
+#### 2. Install RipGrep
 
 ```
 RIPGREP_VERSION=$(curl -s "https://api.github.com/repos/BurntSushi/ripgrep/releases/latest" | grep -Po '"tag_name": "\K[0-9.]+')
@@ -32,7 +32,7 @@ rg --version
 rm -rf ripgrep.deb
 ```
 
-#### Install NPM Global Packages
+#### 3. Install NPM Global Packages
 
 - `chmod u+x install.sh`
 - `./install.sh`
