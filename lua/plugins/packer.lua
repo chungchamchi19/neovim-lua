@@ -46,4 +46,16 @@ require("packer").startup(function()
     'nvim-telescope/telescope.nvim',
     requires = { {'nvim-lua/plenary.nvim'} }
   }
+
+  -- formater
+  use "mhartington/formatter.nvim"
+
+  -- git 
+  use {
+    'lewis6991/gitsigns.nvim',
+    requires = {
+      'nvim-lua/plenary.nvim'
+    },
+    -- tag = 'release' -- To use the latest release
+  }
 end)
