@@ -86,4 +86,6 @@ require'nvim-tree'.setup {
   }
 }
 
-
+vim.g.nvim_tree_icons = {
+  default = ""
+}
