@@ -9,3 +9,5 @@ nvim_set_keymap("n", "[f", "<cmd>Telescope live_grep<CR>", opts)
 nvim_set_keymap("n", "<space>f", "<cmd>FormatWrite<CR>", opts)
 -- Preview image
 nvim_set_keymap("n", "pm", "<cmd>Telescope media_files<CR>", opts)
+-- rename variables
+nvim_set_keymap("n", "<space>rn", "<cmd>lua vim.lsp.buf.rename()<CR>", opts)

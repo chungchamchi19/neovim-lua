@@ -36,6 +36,7 @@ require("formatter").setup {
           args = {
             "--in-place --aggressive --aggressive",
             vim.fn.fnameescape(vim.api.nvim_buf_get_name(0)),
+            "--max-line-length=160"
           },
           stdin = false,
         }
