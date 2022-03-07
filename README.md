@@ -38,4 +38,26 @@ rm -rf ripgrep.deb
 - `./install.sh`
 - Intall autopep8 for python: `sudo apt-get install -y python3-autopep8`
 
+### 4. Install Überzug For Images Preview
+
+```
+sudo apt-get install python3 python3-dev libx11-dev libxext-dev
+```
+
+```
+curl https://bootstrap.pypa.io/get-pip.py -o get-pip.py
+```
+
+```
+sudo python3 get-pip.py
+```
+
+```
+sudo pip3 install ueberzug
+```
+
+```
+rm -rf get-pip.py
+```
+
 Continue updating...
