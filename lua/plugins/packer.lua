@@ -53,6 +53,7 @@ require("packer").startup(function()
     'nvim-telescope/telescope.nvim',
     requires = { {'nvim-lua/plenary.nvim'} }
   }
+  use "nvim-telescope/telescope-media-files.nvim"
 
   -- formater
   use "mhartington/formatter.nvim"
