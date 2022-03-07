@@ -22,6 +22,7 @@ require("packer").startup(function()
   use {
     "ray-x/lsp_signature.nvim",
   }
+  use 'lewis6991/impatient.nvim'
 
   -- cmp plugins
   use "hrsh7th/nvim-cmp" -- The completion plugin
