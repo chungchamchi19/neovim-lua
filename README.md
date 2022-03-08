@@ -60,4 +60,19 @@ sudo pip3 install ueberzug
 rm -rf get-pip.py
 ```
 
+### 5. Install LSP Server
+
+```
+:LspInstall jsonls
+```
+```
+:LspInstall javascript
+```
+```
+:LspInstall typescript
+```
+```
+:LspInstall python
+```
+
 Continue updating...
