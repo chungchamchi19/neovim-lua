@@ -75,4 +75,19 @@ rm -rf get-pip.py
 :LspInstall python
 ```
 
+### 5. Install TreeSister For Highlight Code
+
+```
+:TSInstall jsonls
+```
+```
+:TSInstall javascript
+```
+```
+:TSInstall typescript
+```
+```
+:TSInstall python
+```
+
 Continue updating...
