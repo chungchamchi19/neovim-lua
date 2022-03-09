@@ -1,4 +1,8 @@
 require("nvim-treesitter.configs").setup {
+  -- One of "all", "maintained" (parsers with maintainers), or a list of languages
+  ensure_installed = { "javascript", "typescript", "html", "css", "python", "vue", "go" },
+  -- Install languages synchronously (only applied to `ensure_installed`)
+  sync_install = true,
   context_commentstring = {
     enable = true,
     enable_autocmd = false,
