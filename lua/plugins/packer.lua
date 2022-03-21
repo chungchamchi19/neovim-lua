@@ -67,6 +67,15 @@ require("packer").startup(function()
     -- tag = 'release' -- To use the latest release
   }
 
+  -- comment
+  use {
+    "numToStr/Comment.nvim",
+    config = function()
+      require("Comment").setup()
+    end,
+  }
+  use "JoosepAlviste/nvim-ts-context-commentstring"
+
   if packer_bootstrap then
     require('packer').sync()
   end
