@@ -5,7 +5,7 @@ Author: ChungChamChi
 
 https://gist.github.com/opchav/5ba865c9e6415c2af825bad153f876f7
 
-## Remember Installing Followings Packages
+## Remember Installing Following Packages
 
 ### 1. Install Nerd Font For Icon 
 https://gist.github.com/matthewjberger/7dd7e079f282f8138a9dc3b045ebefa0?permalink_comment_id=3307825#gistcomment-3307825
