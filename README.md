@@ -1,6 +1,10 @@
 # Configure NeoVim 0.6 
 Author: ChungChamChi
 
+## Install NeoVim 0.6
+
+https://gist.github.com/opchav/5ba865c9e6415c2af825bad153f876f7
+
 ## Remember Installing Followings Packages
 
 ### 1. Install Nerd Font For Icon 
