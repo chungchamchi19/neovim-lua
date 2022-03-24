@@ -94,4 +94,8 @@ rm -rf get-pip.py
 :TSInstall python
 ```
 
+### 7. If error <stdio.h>
+
+- Reinstall cc1plus
+
 Continue updating...
