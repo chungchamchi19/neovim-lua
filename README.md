@@ -94,8 +94,11 @@ rm -rf get-pip.py
 :TSInstall python
 ```
 
-### 7. If error <stdio.h>
+### 7. If error cc1plus
 
 - Reinstall cc1plus
+```
+sudo apt-get install g++
+```
 
 Continue updating...
