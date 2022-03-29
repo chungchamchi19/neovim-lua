@@ -100,5 +100,10 @@ rm -rf get-pip.py
 ```
 sudo apt-get install g++
 ```
+### 8. If not copy from vim to host, install xclip
+
+```
+sudo apt-get install xclip
+```
 
 Continue updating...
