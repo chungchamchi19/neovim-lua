@@ -1,7 +1,11 @@
 # Configure NeoVim 0.6 
 Author: ChungChamChi
 
-## Remember Installing Followings Packages
+## Install NeoVim 0.6
+
+https://gist.github.com/opchav/5ba865c9e6415c2af825bad153f876f7
+
+## Remember Installing Following Packages
 
 ### 1. Install Nerd Font For Icon 
 https://gist.github.com/matthewjberger/7dd7e079f282f8138a9dc3b045ebefa0?permalink_comment_id=3307825#gistcomment-3307825
@@ -88,6 +92,18 @@ rm -rf get-pip.py
 ```
 ```
 :TSInstall python
+```
+
+### 7. If error cc1plus
+
+- Reinstall cc1plus
+```
+sudo apt-get install g++
+```
+### 8. If not copy from vim to host, install xclip
+
+```
+sudo apt-get install xclip
 ```
 
 Continue updating...
