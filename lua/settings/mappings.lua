@@ -11,3 +11,5 @@ nvim_set_keymap("n", "<space>f", "<cmd>FormatWrite<CR>", opts)
 nvim_set_keymap("n", "pm", "<cmd>Telescope media_files<CR>", opts)
 -- rename variables
 nvim_set_keymap("n", "<space>rn", "<cmd>lua vim.lsp.buf.rename()<CR>", opts)
+-- outline 
+nvim_set_keymap("n", "so", "<cmd>SymbolsOutline<CR>", opts)

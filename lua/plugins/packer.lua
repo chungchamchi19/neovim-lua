@@ -76,6 +76,9 @@ require("packer").startup(function()
   }
   use "JoosepAlviste/nvim-ts-context-commentstring"
 
+  -- outline 
+  use "simrat39/symbols-outline.nvim"
+
   if packer_bootstrap then
     require('packer').sync()
   end
