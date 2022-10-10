@@ -5,13 +5,13 @@ require'lspconfig'.volar.setup{
 -- css
 local capabilities = vim.lsp.protocol.make_client_capabilities()
 capabilities.textDocument.completion.completionItem.snippetSupport = true
-require'lspconfig'.cssls.setup {
-  capabilities = capabilities,
-}
+-- require'lspconfig'.cssls.setup {
+--   capabilities = capabilities,
+-- }
 -- html
-require'lspconfig'.html.setup {
-  capabilities = capabilities,
-}
+-- require'lspconfig'.html.setup {
+--   capabilities = capabilities,
+-- }
 -- json 
 require'lspconfig'.jsonls.setup {
   capabilities = capabilities,
