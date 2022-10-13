@@ -7,7 +7,7 @@ local js_and_friends = {
         "--stdin-filepath",
         vim.api.nvim_buf_get_name(0),
         -- "--single-quote",
-        "--print-width 160"
+        "--print-width 120"
       },
       stdin = true,
     }
