@@ -48,8 +48,7 @@ require'nvim-tree'.setup {
     timeout = 500,
   },
   view = {
-    width = 40,
-    height = 30,
+    adaptive_size = true,
     hide_root_folder = false,
     side = 'left',
     preserve_window_proportions = false,
@@ -64,6 +63,13 @@ require'nvim-tree'.setup {
   trash = {
     cmd = "trash",
     require_confirm = true
+  },
+  renderer = {
+    icons = {
+      glyphs = {
+        default = ""
+      }
+    }
   },
   actions = {
     change_dir = {
@@ -83,8 +89,4 @@ require'nvim-tree'.setup {
       }
     }
   }
-}
-
-vim.g.nvim_tree_icons = {
-  default = ""
 }
