@@ -80,6 +80,17 @@ require("packer").startup(function()
   -- outline 
   use "simrat39/symbols-outline.nvim"
 
+  -- copilot
+  use "github/copilot.vim"
+  use { "zbirenbaum/copilot.lua" }
+  use {
+    "zbirenbaum/copilot-cmp",
+    after = { "copilot.lua" },
+    config = function ()
+      require("copilot_cmp").setup()
+    end
+  }
+
   if packer_bootstrap then
     require('packer').sync()
   end
