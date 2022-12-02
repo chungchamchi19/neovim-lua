@@ -11,8 +11,7 @@ end
 
 --   פּ ﯟ   some other good icons
 local kind_icons = {
-  -- Text = "",
-  Text = "",
+  Text = "",
   Method = "m",
   Function = "",
   Constructor = "",
@@ -65,11 +64,7 @@ cmp.setup {
     },
     -- Accept currently selected item. If none selected, `select` first item.
     -- Set `select` to `false` to only confirm explicitly selected items.
-    ["<CR>"] = cmp.mapping.confirm({
-      -- this is the important line
-      behavior = cmp.ConfirmBehavior.Replace,
-      select = false,
-    }),
+    ["<CR>"] = cmp.mapping.confirm { select = true },
     ["<Tab>"] = cmp.mapping(function(fallback)
       if cmp.visible() and has_words_before() then
         cmp.select_next_item()
@@ -100,12 +95,16 @@ cmp.setup {
     format = function(entry, vim_item)
       -- Kind icons
       vim_item.kind = string.format("%s", kind_icons[vim_item.kind])
+      if (entry.source.name == "copilot") then
+        vim_item.kind = string.format("%s", kind_icons['Copilot'])
+      end
       -- vim_item.kind = string.format('%s %s', kind_icons[vim_item.kind], vim_item.kind) -- This concatonates the icons with the name of the item kind
       vim_item.menu = ({
         nvim_lsp = "[LSP]",
         nvim_lua = "[NVIM_LUA]",
         luasnip = "[Snippet]",
         buffer = "[Buffer]",
+        copilot= "[Copilot]",
         path = "[Path]",
       })[entry.source.name]
       return vim_item
