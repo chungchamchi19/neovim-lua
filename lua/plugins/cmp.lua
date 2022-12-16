@@ -36,8 +36,15 @@ local kind_icons = {
   Event = "",
   Operator = "",
   TypeParameter = "",
+  Copilot = "",
 }
 -- find more here: https://www.nerdfonts.com/cheat-sheet
+
+local has_words_before = function()
+  if vim.api.nvim_buf_get_option(0, "buftype") == "prompt" then return false end
+  local line, col = unpack(vim.api.nvim_win_get_cursor(0))
+  return col ~= 0 and vim.api.nvim_buf_get_text(0, line-1, 0, line-1, col, {})[1]:match("^%s*$") == nil
+end
 
 cmp.setup {
   snippet = {
@@ -58,9 +65,12 @@ cmp.setup {
     },
     -- Accept currently selected item. If none selected, `select` first item.
     -- Set `select` to `false` to only confirm explicitly selected items.
-    ["<CR>"] = cmp.mapping.confirm { select = true },
+    ["<CR>"] = cmp.mapping.confirm { 
+      behavior = cmp.ConfirmBehavior.Replace,
+      select = true 
+    },
     ["<Tab>"] = cmp.mapping(function(fallback)
-      if cmp.visible() then
+      if cmp.visible() and has_words_before() then
         cmp.select_next_item()
       elseif luasnip.expandable() then
         luasnip.expand()
@@ -89,12 +99,16 @@ cmp.setup {
     format = function(entry, vim_item)
       -- Kind icons
       vim_item.kind = string.format("%s", kind_icons[vim_item.kind])
+      if (entry.source.name == "copilot") then
+        vim_item.kind = string.format("%s", kind_icons['Copilot'])
+      end
       -- vim_item.kind = string.format('%s %s', kind_icons[vim_item.kind], vim_item.kind) -- This concatonates the icons with the name of the item kind
       vim_item.menu = ({
         nvim_lsp = "[LSP]",
         nvim_lua = "[NVIM_LUA]",
         luasnip = "[Snippet]",
         buffer = "[Buffer]",
+        copilot= "[Copilot]",
         path = "[Path]",
       })[entry.source.name]
       return vim_item
@@ -104,6 +118,7 @@ cmp.setup {
     { name = "nvim_lsp" },
     { name = "nvim_lua" },
     { name = "luasnip" },
+    { name = "copilot", group_index = 2 },
     { name = "buffer" },
     { name = "path" },
   },

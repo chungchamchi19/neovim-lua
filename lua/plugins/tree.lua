@@ -1,8 +1,9 @@
--- init.lua
--- keybinds
-local list = {
-  { key = "l", action = "preview" }, 
-}
+vim.g.loaded_netrw = 1
+vim.g.loaded_netrwPlugin = 1
+
+-- set termguicolors to enable highlight groups
+vim.opt.termguicolors = true
+
 -- following options are the default
 -- each of these are documented in `:help nvim-tree.OPTION_NAME`
 require'nvim-tree'.setup {
@@ -53,8 +54,9 @@ require'nvim-tree'.setup {
     side = 'left',
     preserve_window_proportions = false,
     mappings = {
-      custom_only = false,
-      list = list
+      list = {
+        { key = "l", action = "edit" },
+      },
     },
     number = false,
     relativenumber = false,
