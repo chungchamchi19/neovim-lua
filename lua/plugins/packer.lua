@@ -102,6 +102,15 @@ require("packer").startup(function()
     end
   }
 
+  -- spell checker and eslint
+  use({
+    "jose-elias-alvarez/null-ls.nvim",
+    config = function()
+        require("null-ls").setup()
+    end,
+    requires = { "nvim-lua/plenary.nvim" },
+  })
+
   if packer_bootstrap then
     require('packer').sync()
   end
