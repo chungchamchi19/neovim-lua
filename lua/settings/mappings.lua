@@ -20,7 +20,6 @@ nvim_create_cmd('FF', 'lua vim.lsp.buf.format()', {})
 nvim_set_keymap("n", "<leader>f", "<cmd>lua vim.diagnostic.open_float()<CR>", opts)
 vim.diagnostic.config({
   float = {
-    source = 'always',
     border = 'rounded',
   },
 })
