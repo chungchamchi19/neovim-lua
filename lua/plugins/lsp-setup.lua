@@ -1,6 +1,6 @@
 -- vue3
 require'lspconfig'.volar.setup{
-  filetypes = {'vue', 'json'}
+  filetypes = {'typescript', 'javascript', 'javascriptreact', 'typescriptreact', 'vue', 'json'}
 }
 -- css
 -- local capabilities = vim.lsp.protocol.make_client_capabilities()
