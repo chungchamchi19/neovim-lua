@@ -1,3 +1,3 @@
-require("plugins.lsp-handler").setup()
+require("plugins.lsp-handler")
 require("plugins.mason")
 require("plugins.lsp-setup")
