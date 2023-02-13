@@ -1,7 +1,7 @@
-# Configure NeoVim 0.6 
+# Configure NeoVim 0.8
 Author: ChungChamChi
 
-## Install NeoVim 0.6
+## Install NeoVim 0.8
 
 https://gist.github.com/opchav/5ba865c9e6415c2af825bad153f876f7
 
