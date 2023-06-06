@@ -7,4 +7,5 @@ npm i -g gofmt && \
 npm i -g @volar/vue-language-server && \
 npm i -g @tailwindcss/language-server && \
 npm i -g typescript typescript-language-server && \
-npm i -g vscode-langservers-extracted
+npm i -g vscode-langservers-extracted && \
+npm i -g eslint_d cspell

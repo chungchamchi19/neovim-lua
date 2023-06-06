@@ -21,6 +21,6 @@ require'lspconfig'.tailwindcss.setup{}
 -- typescript
 require'lspconfig'.tsserver.setup{}
 -- go
-require'lspconfig'.gopls.setup{}
+-- require'lspconfig'.gopls.setup{}
 -- python
 require'lspconfig'.pyright.setup{}
