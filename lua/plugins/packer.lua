@@ -80,6 +80,19 @@ require("packer").startup(function()
   -- outline 
   use "simrat39/symbols-outline.nvim"
 
+  -- folding code 
+  use({
+    "luukvbaal/statuscol.nvim",
+    config = function ()
+    -- folding code
+    vim.opt.foldcolumn = "1"
+    vim.opt.foldlevel = 99
+    vim.opt.foldmethod = "expr"
+    vim.opt.foldexpr = "v:lua.vim.treesitter.foldexpr()"
+      require("statuscol").setup({})
+    end,
+  })
+
   -- copilot
   use {
     "zbirenbaum/copilot.lua",

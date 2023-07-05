@@ -16,4 +16,3 @@ set.cmdheight = 1
 set.signcolumn = "yes"
 set.undofile = true
 -- For Alt + Arrow
-
