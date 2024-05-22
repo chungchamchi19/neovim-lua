@@ -10,7 +10,6 @@ require'nvim-tree'.setup {
   sort_by = "case_sensitive",
   view = {
     adaptive_size = true,
-    hide_root_folder = false,
     side = 'left',
     preserve_window_proportions = false,
     number = false,
@@ -48,6 +47,7 @@ require'nvim-tree'.setup {
         default = ""
       }
     },
+    root_folder_label = true,
     group_empty = true,
   },
 }
