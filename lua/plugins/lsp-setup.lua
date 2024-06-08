@@ -1,17 +1,17 @@
 -- vue3
 require'lspconfig'.volar.setup{
-  filetypes = {'typescript', 'javascript', 'javascriptreact', 'typescriptreact', 'vue', 'json'}
+  filetypes = {'typescript', 'javascript', 'vue', 'json'}
 }
 -- css
--- local capabilities = vim.lsp.protocol.make_client_capabilities()
--- capabilities.textDocument.completion.completionItem.snippetSupport = true
+local capabilities = vim.lsp.protocol.make_client_capabilities()
+capabilities.textDocument.completion.completionItem.snippetSupport = true
 -- require'lspconfig'.cssls.setup {
 --   capabilities = capabilities,
 -- }
 -- html
--- require'lspconfig'.html.setup {
---   capabilities = capabilities,
--- }
+require'lspconfig'.html.setup {
+  capabilities = capabilities,
+}
 -- json 
 -- require'lspconfig'.jsonls.setup {
 --   capabilities = capabilities,
@@ -19,7 +19,9 @@ require'lspconfig'.volar.setup{
 -- tailwind
 require'lspconfig'.tailwindcss.setup{}
 -- typescript
-require'lspconfig'.tsserver.setup{}
+require'lspconfig'.tsserver.setup{
+  capabilities = capabilities,
+}
 -- go
 -- require'lspconfig'.gopls.setup{}
 -- python

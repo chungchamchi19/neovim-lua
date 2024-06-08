@@ -2,6 +2,9 @@ local cmp_status_ok, cmp = pcall(require, "cmp")
 
 local snip_status_ok, luasnip = pcall(require, "luasnip")
 
+luasnip.filetype_extend("javascriptreact", { "html" })
+luasnip.filetype_extend("typescriptreact", { "html" })
+
 require("luasnip/loaders/from_vscode").lazy_load()
 
 local check_backspace = function()
